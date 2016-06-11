@@ -157,7 +157,7 @@ func toCsvs(path string) map[string][]byte {
 
 	result := make(map[string][]byte)
 	for _, sheet := range file.Sheets {
-		result[sheet.Name] = toCsv(sheet)
+		result[sheet.Name+".csv"] = toCsv(sheet)
 	}
 	return result
 }
