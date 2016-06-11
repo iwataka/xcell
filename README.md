@@ -16,3 +16,7 @@ directory:
 ```
 xcell conv [file] [dir]
 ```
+
+## ToDo
+
++ Consider how to handle newlines contained in cells
