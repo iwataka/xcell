@@ -140,12 +140,12 @@ func printDiffs(diffs []*diff) {
 func convFile(path1, path2 string) {
 	info, err := os.Stat(path2)
 	if err != nil || !info.IsDir() {
-		os.Mkdir(path2, 600)
+		os.Mkdir(path2, 0700)
 	}
 	name2csv := toCsvs(path1)
 	for name, csv := range name2csv {
 		dest := path.Join(path2, name)
-		ioutil.WriteFile(dest, csv, 600)
+		ioutil.WriteFile(dest, csv, 0700)
 	}
 }
 
